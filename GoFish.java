@@ -30,14 +30,15 @@ public class GoFish{
 
 	public boolean isGameOver(){
 		return isGameOver;
+		
 	}
 	
 	public void allocateCards(){
 
 	}
 
-	public void askCard(){
-
+	public void askCard(Card askedCard){ //I've used a card obeject here as presumably we'd be able to get that from GUI?
+		int selectedRank = askedCard.getRank();
 	}
 	
 	public void runGameLoop(){
