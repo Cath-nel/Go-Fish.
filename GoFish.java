@@ -1,5 +1,4 @@
 public class GoFish{
-	//comment just for visilisations sake - this will control an individual game, so needs stuff for one single game and the game play
 
 	public static int GOFISH_DECKSIZE = 7;
 	private Hand mainDeck; //using a Hand object to store the remaining cards in the deck
@@ -34,14 +33,14 @@ public class GoFish{
 	}
 	
 	public void allocateCards(){
-
+		
 	}
 
-	public void askCard(Card askedCard){ //I've used a card obeject here as presumably we'd be able to get that from GUI?
+	public void askCard(Card askedCard){ //I've used a card object here as presumably we'd be able to get that from GUI?
 		int selectedRank = askedCard.getRank();
 	}
 	
 	public void runGameLoop(){
-
+		allocateCards();
 	}
 }
