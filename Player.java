@@ -8,4 +8,10 @@ public class Player{
 		this.player = playerName;
 		this.hand = hand;
 	}
+	public String getPlayerIDe(){
+		return playerID;
+	}
+	public String getPlayerName(){
+		return playerName;
+	}
 }
