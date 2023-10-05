@@ -1,12 +1,13 @@
 public class Card{
   private String cardID;
-	private String suite;
+	private int suite;
 	private int deck; //what is this for?
 	private int rank; 
   
-	public Card(String cardID, String suite, String rank){
+	public Card(String cardID, int suite, int rank){
 		this.cardID = cardID;
-
+		this.suite = suite;
+		this.rank = rank;
 	}
 
 	public int getRank(){ 
