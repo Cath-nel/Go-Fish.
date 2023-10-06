@@ -102,11 +102,15 @@ public class GoFish{
 			case 2:
 				Card current2 = computer.giveCard(selectedRank);
 				if(current2!=null){
+					System.out.println("Opponent gives you " + current.toString());
 					user.takeCard(current2);
 				}else{
+					System.out.println("Opponent has no cards of that rank. Go Fish!");
 					Random rnd = new Random();
 					int num = rnd.nextInt(remainingInDeck);
-					user.takeCard(cards.get(num));
+					Card fromDeck = cards.get(num);
+					System.out.println("You drew " + fromDeck.toString());
+					user.takeCard(fromDeck);
 				}
 				break;
 		}
