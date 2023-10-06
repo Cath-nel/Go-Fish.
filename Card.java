@@ -71,7 +71,7 @@ public class Card{
 				//break;
 
 		}
-		result = result + " of " + suite;
+		result = result + " of " + Suite.getSuite(suite);
 		return result;
 	}
 	
