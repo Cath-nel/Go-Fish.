@@ -117,6 +117,7 @@ public class GoFish{
 		int currentPlayer = 1;
 		while(continueGame){
 			if(currentPlayer==1){
+				user.getHand().displayHand();
 				Scanner sc = new Scanner(System.in);
 				System.out.println("What rank of card do you want to request?");
 				int requestedRank = Integer.parseInt(sc.next());
