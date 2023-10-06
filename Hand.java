@@ -79,6 +79,35 @@ public class Hand{
 		cards.add(newCard);
 	}
 
+	public int identifyCardToRequest(){
+		int[] frequency = new int[13];
+		for(int i = 0; i<13; i++){
+			for(int j =0; j<numCards; i++){
+				if(cards.get(j).getRank()==i){
+					frequency[i]++;
+				}
+		}
+		int ans = 0;
+		int rank = -1;
+		for(int i =0; i<13; i++){
+			if(frequency[i] > ans){
+				ans = frequency[i];
+				rank = i+1;
+			}
+			if(frequency[i]<ans && frequency[i]>0 && rank == -1){
+				rank = i+1;
+			}
+		}
+		return rank;	
+		
+	}
+
+	public void displayHand(){
+		for(int i =0; i<numCards; i++){
+			System.out.println(cards.get(i).toString());
+		}
+	}
+
 	public boolean isEmpty(){
 		if(cards.size()==0){
 			return true;
