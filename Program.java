@@ -1,4 +1,7 @@
 public class Program{
   public static void main(String[] args){
-    System.out.println("hello world");
+    if (GoFish.end()==true){
+      System.exit(0);
+    }else{
+    }
   }}
