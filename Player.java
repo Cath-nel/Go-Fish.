@@ -18,6 +18,10 @@ public class Player{
 		return playerName;
 	}
 
+	public void allocateHand(Hand hand){
+		this.hand = hand;
+	}
+
 	public void addBook(List<Card> book){
 		books.add(book);
 		numBooks++;
