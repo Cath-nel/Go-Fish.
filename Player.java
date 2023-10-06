@@ -25,6 +25,10 @@ public class Player{
 		return numBooks;
 	}
 
+	public Hand getHand(){
+		return hand;
+	}
+
 	public void allocateHand(Hand hand){
 		this.hand = hand;
 	}
