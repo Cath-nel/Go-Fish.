@@ -112,9 +112,19 @@ public class GoFish{
 	
 	public void runGameLoop(){
 		allocateCards();
-
+		int currentPlayer = 1;
 		which(continueGame){
-
+			if(currentPlayer==1){
+				//get user card request
+				Card request;
+				askCard(request, 2);
+				currentPlayer = 2;
+			}else if(currentPlayer==2){
+				//algorithm to decide which card to ask for
+				Card request;
+				askCard(request, 1);
+				currentPlayer = 1;
+			}
 			updateBooks();
 		}
 		
