@@ -1,4 +1,6 @@
 import java.util.ArrayList;
+import java.util.Collections;
+
 public class GoFish{
 	private List<Card> cards = "Ace", "2","3","4","5","6","7","8","9","10"","Jack","Queen", "King","Ace", "2","3","4","5","6","7","8","9","10"","Jack","Queen", "King","Ace", "2","3","4","5","6","7","8","9","10"","Jack","Queen", "King","Ace", "2","3","4","5","6","7","8","9","10"","Jack","Queen", "King"};
 	public static int GOFISH_DECKSIZE = 7;
@@ -26,6 +28,8 @@ public class GoFish{
 		userBooks = 0;
 		this.computer = computer;
 		userBooks = 0;
+
+		 Collections.shuffle(cards);
 	}
 
 	public boolean isGameOver(){
