@@ -1,10 +1,13 @@
 import java.util.ArrayList;
 import java.util.Collections;
+import java.util.Random;
 
 public class GoFish{
 	private List<Card> cards = {"Ace", "2","3","4","5","6","7","8","9","10"","Jack","Queen", "King","Ace", "2","3","4","5","6","7","8","9","10"","Jack","Queen", "King","Ace", "2","3","4","5","6","7","8","9","10"","Jack","Queen", "King","Ace", "2","3","4","5","6","7","8","9","10"","Jack","Queen", "King"};
-	public static int GOFISH_DECKSIZE = 7;
-	private Hand mainDeck; //using a Hand object to store the remaining cards in the deck
+
+	private int remainingInDeck;
+	//public static int GOFISH_DECKSIZE = 7;
+	//private Hand mainDeck; //using a Hand object to store the remaining cards in the deck
 	
 	//Player1
 	private Player user; //needs to be instantiated in Program class
@@ -13,8 +16,9 @@ public class GoFish{
 	//Player2 i.e. the computer
 	private Player computer; //instantiated in Program class??? or here????
 	private int computerBooks;
-
-	private boolean isGameDone;
+	
+	private int totalBooks;
+	private boolean continueGame;
 	
 	/*public static int DECKSIZE;
 	private boolean isGameDone;
@@ -29,6 +33,9 @@ public class GoFish{
 		this.computer = computer;
 		userBooks = 0;
 
+		totalBooks = 0;
+		continueGame = true;
+
 		for(int i = 0; i<4; i++){
 			for(int j = 0; j < 13; j++){
 				String cardID = Suite.getSuite(i+1) + (j+1);
@@ -37,11 +44,19 @@ public class GoFish{
 		}
 		
 		 Collections.shuffle(cards);
+
+		remainingInDeck = cards.size();
 	}
 
-	public boolean isGameOver(){
-		return isGameOver;
-		
+	public boolean continueGame(){
+		return continueGame;
+	}
+
+	public void updateBooks(){
+		totalBooks = user.getBooks() + computer.getBooks();
+		if(totalBooks == 13){
+			continueGame = false;
+		}
 	}
 	
 	public void allocateCards(){
@@ -51,12 +66,12 @@ public class GoFish{
 			if(i%2==0){
 				Card current = cards.get(i);
 				cards.remove(i);
-				//numCards--;
+				remainingInDeck--;
 				playerCards.add(current);
 			}else{
 				Card current = cards.get(i);
 				cards.remove(i);
-				//numCards--;
+				remainingInDeck--;
 				compCards.add(current);
 			}
 		}
@@ -68,11 +83,40 @@ public class GoFish{
 		computer.allocateHand(compHand);
 	}
 
-	public void askCard(Card askedCard){ //I've used a card object here as presumably we'd be able to get that from GUI?
+	public void askCard(Card askedCard, int playerToAsk){ //I've used a card object here as presumably we'd be able to get that from GUI?
 		int selectedRank = askedCard.getRank();
+
+		switch(playerToAsk){
+			case 1:
+				Card current = user.giveCard(selectedRank);
+				if(current!=null){
+					computer.addCard(current);
+				}else{
+					Randon rnd = new Random();
+					int num = rnd.nextInt(remainingInDeck);
+					computer.addCard(cards.get(num));
+				}
+				break;
+			case 2:
+				Card current = computer.giveCard(selectedRank);
+				if(current!=null){
+					user.addCard(current);
+				}else{
+					Randon rnd = new Random();
+					int num = rnd.nextInt(remainingInDeck);
+					user.addCard(cards.get(num));
+				}
+				break;
+		}
 	}
 	
 	public void runGameLoop(){
 		allocateCards();
+
+		which(continueGame){
+
+			updateBooks();
+		}
+		
 	}
 }
