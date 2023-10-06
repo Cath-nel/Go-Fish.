@@ -101,7 +101,7 @@ public class GoFish{
 			case 2:
 				Card current2 = computer.giveCard(selectedRank);
 				if(current2!=null){
-					user.takeCard(current);
+					user.takeCard(current2);
 				}else{
 					Random rnd = new Random();
 					int num = rnd.nextInt(remainingInDeck);
