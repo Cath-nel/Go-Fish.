@@ -43,6 +43,7 @@ public class GoFish{
 			for(int j = 0; j < 13; j++){
 				String cardID = Suite.getSuite(i+1) + (j+1);
 				Card current = new Card(cardID , i+1, j+1);
+				cards.add(current);
 			}
 		}
 		
