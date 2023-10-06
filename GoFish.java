@@ -76,36 +76,34 @@ public class GoFish{
 				compCards.add(current);
 			}
 		}
-		Hand userHand = new Hand(user);
-		userHand.getCards(playerCards);
+		Hand userHand = new Hand(playerCards);
 		user.allocateHand(userHand);
-		Hand compHand = new Hand(computer);
-		compHand.getCards(compCards);
+		Hand compHand = new Hand(compHands);
 		computer.allocateHand(compHand);
 	}
 
-	public void askCard(Card askedCard, int playerToAsk){ //I've used a card object here as presumably we'd be able to get that from GUI?
-		int selectedRank = askedCard.getRank();
+	public void askCard(int selectedRank, int playerToAsk){ 
+		//int selectedRank = askedCard.getRank();
 
 		switch(playerToAsk){
 			case 1:
 				Card current = user.giveCard(selectedRank);
 				if(current!=null){
-					computer.addCard(current);
+					computer.takeCard(current);
 				}else{
 					Random rnd = new Random();
 					int num = rnd.nextInt(remainingInDeck);
-					computer.addCard(cards.get(num));
+					computer.takeCard(cards.get(num));
 				}
 				break;
 			case 2:
 				Card current = computer.giveCard(selectedRank);
 				if(current!=null){
-					user.addCard(current);
+					user.takeCard(current);
 				}else{
 					Random rnd = new Random();
 					int num = rnd.nextInt(remainingInDeck);
-					user.addCard(cards.get(num));
+					user.takeCard(cards.get(num));
 				}
 				break;
 		}
@@ -116,14 +114,20 @@ public class GoFish{
 		int currentPlayer = 1;
 		while(continueGame){
 			if(currentPlayer==1){
+				Scanner sc = new Scanner(System.in);
+				System.out.println("What rank of card do you want to request?");
+				int requestedRank = Integer.parseInt(sc.next());
 				//get user card request
-				Card request;
-				askCard(request, 2);
+				//Card request;
+				//askCard(request, 2);
+				askCard(requestedRank, 2);
 				currentPlayer = 2;
 			}else if(currentPlayer==2){
 				//algorithm to decide which card to ask for
-				Card request;
-				askCard(request, 1);
+				//Card request;
+				//askCard(request, 1);
+				int requestedRank = computer.getHand().identifyCardToRequest();
+				askCard(requestedRank, 1);
 				currentPlayer = 1;
 			}
 			updateBooks();
