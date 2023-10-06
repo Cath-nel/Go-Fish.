@@ -102,7 +102,7 @@ public class GoFish{
 			case 2:
 				Card current2 = computer.giveCard(selectedRank);
 				if(current2!=null){
-					System.out.println("Opponent gives you " + current.toString());
+					System.out.println("Opponent gives you " + current2.toString());
 					user.takeCard(current2);
 				}else{
 					System.out.println("Opponent has no cards of that rank. Go Fish!");
