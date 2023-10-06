@@ -1,3 +1,4 @@
+import java.util.ArrayList;
 public class GoFish{
 	private List<Card> cards = "Ace", "2","3","4","5","6","7","8","9","10"","Jack","Queen", "King","Ace", "2","3","4","5","6","7","8","9","10"","Jack","Queen", "King","Ace", "2","3","4","5","6","7","8","9","10"","Jack","Queen", "King","Ace", "2","3","4","5","6","7","8","9","10"","Jack","Queen", "King"};
 	public static int GOFISH_DECKSIZE = 7;
