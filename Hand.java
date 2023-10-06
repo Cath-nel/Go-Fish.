@@ -92,7 +92,7 @@ public class Hand{
 	public int identifyCardToRequest(){
 		int[] frequency = new int[13];
 		for(int i = 0; i<13; i++){
-			for(int j =0; j<numCards; i++){
+			for(int j =0; j<numCards; j++){
 				if(cards.get(j).getRank()==i+1){
 					frequency[i]++;
 				}
