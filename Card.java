@@ -66,9 +66,9 @@ public class Card{
 			case 13:
 				result = "King";
 				break;
-			case default:
-				result = "Error: not in 1-13 range";
-				break;
+			//case default:
+				//result = "Error: not in 1-13 range";
+				//break;
 
 		}
 		result = result + " of " + suite;
