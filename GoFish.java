@@ -114,7 +114,7 @@ public class GoFish{
 	public void runGameLoop(){
 		allocateCards();
 		int currentPlayer = 1;
-		which(continueGame){
+		while(continueGame){
 			if(currentPlayer==1){
 				//get user card request
 				Card request;
