@@ -8,12 +8,16 @@ public class Player{
 	private int numBooks;
 	private List<List<Card>> books;
 	
-
-	public Player(String playerID, String playerName, Hand hand){
+	public Player(String playerID, String playerName){
+		this.playerID = playerID;
+		this.playerName = playerName;
+	}
+	/*public Player(String playerID, String playerName, Hand hand){
 		this.playerID = playerID;
 		this.playerName = playerName;
 		this.hand = hand;
-	}
+	}*/
+	
 	public String getPlayerID(){
 		return playerID;
 	}
