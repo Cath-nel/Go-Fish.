@@ -1,3 +1,6 @@
+import java.util.ArrayList;
+import java.util.List;
+
 public class Hand{
   private int playerHand; //what is this for
   private List<Card> cards = {"Ace", "2","3","4","5","6","7","8","9","10"","Jack","Queen", "King","Ace", "2","3","4","5","6","7","8","9","10"","Jack","Queen", "King","Ace", "2","3","4","5","6","7","8","9","10"","Jack","Queen", "King","Ace", "2","3","4","5","6","7","8","9","10"","Jack","Queen", "King"};
@@ -42,6 +45,34 @@ public class Hand{
 			}
 		}
 		return null;
+	}
+
+	public boolean checkForBook(int aquiredRank){
+		int counter = 0;
+		for(int i =0; i<numCards; i++){
+			if(cards.get(i).getRank()==requestedRank){
+				counter++;
+			}
+		}
+		if(counter==3){
+			return true;
+		}
+		return false;
+	}
+
+	public List<Card> getBook(int requestedRank){
+		List<Card> result = new ArrayList<>;
+		if(checkForCard(requestedRank)){
+			for(int i =0; i<numCards; i++){
+				if(cards.get(i).getRank()==requestedRank){
+					Card current = cards.get(i);
+					cards.remove(i);
+					numCards--;
+					result.add(current);
+				}
+			}
+		}
+		return result;
 	}
 
 	public boolean isEmpty(){
