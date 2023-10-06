@@ -45,7 +45,7 @@ public class Hand{
 	}
 
 	public boolean isEmpty(){
-		if(cards.size==0){
+		if(cards.size()==0){
 			return true;
 		}
 		return false;
