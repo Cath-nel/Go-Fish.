@@ -5,21 +5,20 @@ public class Suite{
   public static final int SUITE_SPADES = 4;
 
   public static String getSuite(int num){
+    String ans = "";
       switch(num){
         case Suite.SUITE_HEARTS:
-              return "Hearts";
+              ans = "Hearts";
           break;
           case Suite.SUITE_DIAMONDS:
-              return "Diamonds";
+              ans = "Diamonds";
           break;
           case Suite.SUITE_CLUBS:
-              return "Clubs";
+              ans = "Clubs";
           break;
           case Suite.SUITE_SPADES:
-              return "Spades";
+              ans = "Spades";
           break;
-        default:
-          return "Invalid input";
       }
   }
 }
