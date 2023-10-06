@@ -90,10 +90,13 @@ public class GoFish{
 
 		switch(playerToAsk){
 			case 1:
+				System.out.println("Opponent requests a " + Card.formalRank(selectedRank);
 				Card current = user.giveCard(selectedRank);
 				if(current!=null){
+					System.out.println("You give opponent " + current.toString());
 					computer.takeCard(current);
 				}else{
+					System.out.println("You have no cards of that rank. You tell opponent to Go Fish!");
 					Random rnd = new Random();
 					int num = rnd.nextInt(remainingInDeck);
 					computer.takeCard(cards.get(num));
