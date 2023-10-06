@@ -6,7 +6,7 @@ public class Hand{
   	private int playerHand; //what is this for
   	//private List<Card> cards = {"Ace", "2","3","4","5","6","7","8","9","10"","Jack","Queen", "King","Ace", "2","3","4","5","6","7","8","9","10"","Jack","Queen", "King","Ace", "2","3","4","5","6","7","8","9","10"","Jack","Queen", "King","Ace", "2","3","4","5","6","7","8","9","10"","Jack","Queen", "King"};
 	
-	private List<Card> cards = new ArrayList<>;
+	private List<Card> cards = new ArrayList<>();
 	private int numCards;
 	
 	//private String playerID;
@@ -70,7 +70,7 @@ public class Hand{
 	}
 
 	public List<Card> getBook(int requestedRank){
-		List<Card> result = new ArrayList<>;
+		List<Card> result = new ArrayList<>();
 		if(checkForCard(requestedRank)){
 			for(int i =0; i<numCards; i++){
 				if(cards.get(i).getRank()==requestedRank){
