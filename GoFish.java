@@ -3,8 +3,9 @@ import java.util.Collections;
 import java.util.Random;
 
 public class GoFish{
-	private List<Card> cards = {"Ace", "2","3","4","5","6","7","8","9","10"","Jack","Queen", "King","Ace", "2","3","4","5","6","7","8","9","10"","Jack","Queen", "King","Ace", "2","3","4","5","6","7","8","9","10"","Jack","Queen", "King","Ace", "2","3","4","5","6","7","8","9","10"","Jack","Queen", "King"};
+	//private List<Card> cards = {"Ace", "2","3","4","5","6","7","8","9","10"","Jack","Queen", "King","Ace", "2","3","4","5","6","7","8","9","10"","Jack","Queen", "King","Ace", "2","3","4","5","6","7","8","9","10"","Jack","Queen", "King","Ace", "2","3","4","5","6","7","8","9","10"","Jack","Queen", "King"};
 
+	private List<Card> cards;
 	private int remainingInDeck;
 	//public static int GOFISH_DECKSIZE = 7;
 	//private Hand mainDeck; //using a Hand object to store the remaining cards in the deck
