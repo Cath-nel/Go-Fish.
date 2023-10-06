@@ -59,7 +59,7 @@ public class Hand{
 	public boolean checkForBook(int aquiredRank){
 		int counter = 0;
 		for(int i =0; i<numCards; i++){
-			if(cards.get(i).getRank()==requestedRank){
+			if(cards.get(i).getRank()==aquiredRank){
 				counter++;
 			}
 		}
