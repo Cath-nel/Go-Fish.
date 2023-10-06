@@ -1,3 +1,6 @@
+import java.util.Scanner;
+import java.util.Random;
+
 public class Program{
 
   public static void startNewGame(){
