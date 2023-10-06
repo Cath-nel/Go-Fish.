@@ -1,6 +1,6 @@
 public class Hand{
   private int playerHand; //what is this for
-  private List<Card> cards;
+  private List<Card> cards = {"Ace", "2","3","4","5","6","7","8","9","10"","Jack","Queen", "King","Ace", "2","3","4","5","6","7","8","9","10"","Jack","Queen", "King","Ace", "2","3","4","5","6","7","8","9","10"","Jack","Queen", "King","Ace", "2","3","4","5","6","7","8","9","10"","Jack","Queen", "King"};
 	private int numCards;
 	private String playerID;
 	private Player player;
