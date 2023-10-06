@@ -28,7 +28,7 @@ public class Hand{
 
 	public void setHand(List<Card> cards){
 		this.cards = cards;
-		numCards = card.size();
+		numCards = cards.size();
 	}
 
 	public boolean checkForCard(int requestedRank){
