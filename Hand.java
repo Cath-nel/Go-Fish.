@@ -1,23 +1,32 @@
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Random;
 
 public class Hand{
-  private int playerHand; //what is this for
-  private List<Card> cards = {"Ace", "2","3","4","5","6","7","8","9","10"","Jack","Queen", "King","Ace", "2","3","4","5","6","7","8","9","10"","Jack","Queen", "King","Ace", "2","3","4","5","6","7","8","9","10"","Jack","Queen", "King","Ace", "2","3","4","5","6","7","8","9","10"","Jack","Queen", "King"};
+  	private int playerHand; //what is this for
+  	//private List<Card> cards = {"Ace", "2","3","4","5","6","7","8","9","10"","Jack","Queen", "King","Ace", "2","3","4","5","6","7","8","9","10"","Jack","Queen", "King","Ace", "2","3","4","5","6","7","8","9","10"","Jack","Queen", "King","Ace", "2","3","4","5","6","7","8","9","10"","Jack","Queen", "King"};
+	
+	private List<Card> cards = new ArrayList<>;
 	private int numCards;
-	private String playerID;
-	private Player player;
-	private String playerName; //I dont think we need this cause we can pull it from the player object
+	
+	//private String playerID;
+	//private Player player;
+	//private String playerName; //I dont think we need this cause we can pull it from the player object
+	
 	private boolean hasCard;
 
-	public Hand(Player player){
+	public Hand(){
+		numCards = 0;
+	}
+
+	/*public Hand(Player player){
 		this.player = player;
 		this.playerID = player.getPlayerID;
 		this.playerName = player.getPlayerName;
 		//give random or sequentially next int
-	}
+	}*/
 
-	public void setHand(Card cards){
+	public void setHand(List<Card> cards){
 		this.cards = cards;
 		numCards = card.size();
 	}
