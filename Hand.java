@@ -75,6 +75,10 @@ public class Hand{
 		return result;
 	}
 
+	public void addCard(Card newCard){
+		cards.add(newCard);
+	}
+
 	public boolean isEmpty(){
 		if(cards.size()==0){
 			return true;
