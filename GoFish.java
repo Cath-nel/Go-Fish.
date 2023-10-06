@@ -62,8 +62,8 @@ public class GoFish{
 	}
 	
 	public void allocateCards(){
-		List<Cards> playerCards = new ArrayList<>();
-		List<Cards> compCards = new ArrayList<>();
+		List<Card> playerCards = new ArrayList<>();
+		List<Card> compCards = new ArrayList<>();
 		for(int i = 0; i < 10; i++){
 			if(i%2==0){
 				Card current = cards.get(i);
@@ -79,7 +79,7 @@ public class GoFish{
 		}
 		Hand userHand = new Hand(playerCards);
 		user.allocateHand(userHand);
-		Hand compHand = new Hand(compHands);
+		Hand compHand = new Hand(compCards);
 		computer.allocateHand(compHand);
 	}
 
@@ -98,8 +98,8 @@ public class GoFish{
 				}
 				break;
 			case 2:
-				Card current = computer.giveCard(selectedRank);
-				if(current!=null){
+				Card current2 = computer.giveCard(selectedRank);
+				if(current2!=null){
 					user.takeCard(current);
 				}else{
 					Random rnd = new Random();
