@@ -18,7 +18,7 @@ public class Program{
   public static void main(String[] args){
     System.out.println("Welcome to Go Fish");
     Scanner sc = new Scanner(System.in);
-    System.out.println("Enter "S" to start a new game");
+    System.out.println("Enter /"S/" to start a new game");
 
     String option = sc.next();
 
