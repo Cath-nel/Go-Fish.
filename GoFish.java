@@ -93,7 +93,7 @@ public class GoFish{
 				if(current!=null){
 					computer.addCard(current);
 				}else{
-					Randon rnd = new Random();
+					Random rnd = new Random();
 					int num = rnd.nextInt(remainingInDeck);
 					computer.addCard(cards.get(num));
 				}
@@ -103,7 +103,7 @@ public class GoFish{
 				if(current!=null){
 					user.addCard(current);
 				}else{
-					Randon rnd = new Random();
+					Random rnd = new Random();
 					int num = rnd.nextInt(remainingInDeck);
 					user.addCard(cards.get(num));
 				}
