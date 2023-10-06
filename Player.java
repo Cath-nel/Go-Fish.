@@ -11,7 +11,7 @@ public class Player{
 
 	public Player(String playerID, String playerName, Hand hand){
 		this.playerID = playerID;
-		this.player = playerName;
+		this.playerName = playerName;
 		this.hand = hand;
 	}
 	public String getPlayerID(){
