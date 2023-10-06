@@ -14,7 +14,7 @@ public class Card{
 		return rank;
 	}
 
-	public String getSuite(){
+	public int getSuite(){
 		return suite;
 	}
 
@@ -72,12 +72,13 @@ public class Card{
 
 		}
 		result = result + " of " + suite;
+		return result;
 	}
 	
 
-	public Card(String suite, int deck){
+	/*public Card(String suite, int deck){
 		this.suite = suite;
 		this.deck = deck;
-	}	
+	}*/	
 
 }
