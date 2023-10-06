@@ -90,7 +90,7 @@ public class GoFish{
 
 		switch(playerToAsk){
 			case 1:
-				System.out.println("Opponent requests a " + Card.formalRank(selectedRank);
+				System.out.println("Opponent requests a " + Card.formalRank(selectedRank));
 				Card current = user.giveCard(selectedRank);
 				if(current!=null){
 					System.out.println("You give opponent " + current.toString());
