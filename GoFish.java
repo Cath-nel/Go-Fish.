@@ -29,6 +29,13 @@ public class GoFish{
 		this.computer = computer;
 		userBooks = 0;
 
+		for(int i = 0; i<4; i++){
+			for(int j = 0; j < 13; j++){
+				String cardID = Suite.getSuite(i+1) + (j+1);
+				Card current = new Card(cardID , i+1, j+1);
+			}
+		}
+		
 		 Collections.shuffle(cards);
 	}
 
