@@ -20,5 +20,6 @@ public class Suite{
               ans = "Spades";
           break;
       }
+    return ans;
   }
 }
