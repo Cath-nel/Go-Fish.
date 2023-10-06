@@ -15,8 +15,9 @@ public class Hand{
 	
 	private boolean hasCard;
 
-	public Hand(){
-		numCards = 0;
+	public Hand(List<Card> cards){
+		this.cards = cards;
+		numCards = cards.size();
 	}
 
 	/*public Hand(Player player){
@@ -24,12 +25,12 @@ public class Hand{
 		this.playerID = player.getPlayerID;
 		this.playerName = player.getPlayerName;
 		//give random or sequentially next int
-	}*/
+	}
 
 	public void setHand(List<Card> cards){
 		this.cards = cards;
 		numCards = cards.size();
-	}
+	}*/
 
 	public boolean checkForCard(int requestedRank){
 		for(int i =0; i<numCards; i++){
