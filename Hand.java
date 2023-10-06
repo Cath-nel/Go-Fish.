@@ -95,6 +95,7 @@ public class Hand{
 				if(cards.get(j).getRank()==i){
 					frequency[i]++;
 				}
+			}
 		}
 		int ans = 0;
 		int rank = -1;
