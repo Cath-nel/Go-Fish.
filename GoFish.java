@@ -62,8 +62,10 @@ public class GoFish{
 		}
 		Hand userHand = new Hand(user);
 		userHand.getCards(playerCards);
+		user.allocateHand(userHand);
 		Hand compHand = new Hand(computer);
 		compHand.getCards(compCards);
+		computer.allocateHand(compHand);
 	}
 
 	public void askCard(Card askedCard){ //I've used a card object here as presumably we'd be able to get that from GUI?
