@@ -60,7 +60,7 @@ public class Hand{
 	public int checkForBook(){
 		int[] frequency = new int[13];
 		for(int i = 0; i<13; i++){
-			for(int j =0; j<numCards-1; j++){
+			for(int j = 0; j<numCards; j++){
 				if(cards.get(j).getRank()==i+1){
 					frequency[i]++;
 				}
@@ -79,7 +79,7 @@ public class Hand{
 		List<List<Card>> result = new ArrayList<>();
 		while(checkForBook()!=-1){
 			List<Card> book = new ArrayList<>();
-			for(int i =0; i<numCards-1; i++){
+			for(int i =0; i<numCards; i++){
 				if(cards.get(i).getRank()==checkForBook()){
 					Card current = cards.get(i);
 					cards.remove(i);
