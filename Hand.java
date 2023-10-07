@@ -48,7 +48,7 @@ public class Hand{
 			for(int i =0; i<numCards; i++){
 				if(cards.get(i).getRank()==requestedRank){
 					Card result = cards.get(i);
-					cards.remove(i);
+					cards.remove(result);
 					numCards--;
 					return result;
 				}
@@ -60,7 +60,7 @@ public class Hand{
 	public int checkForBook(){
 		int[] frequency = new int[13];
 		for(int i = 0; i<13; i++){
-			for(int j = 0; j<numCards; j++){
+			for(int j = 0; j<cards.size(); j++){
 				if(cards.get(j).getRank()==i+1){
 					frequency[i]++;
 				}
@@ -79,10 +79,10 @@ public class Hand{
 		List<List<Card>> result = new ArrayList<>();
 		while(checkForBook()!=-1){
 			List<Card> book = new ArrayList<>();
-			for(int i =0; i<numCards; i++){
+			for(int i =0; i<cards.size(); i++){
 				if(cards.get(i).getRank()==checkForBook()){
 					Card current = cards.get(i);
-					cards.remove(i);
+					cards.remove(current);
 					//numCards--;
 					book.add(current);
 				}
