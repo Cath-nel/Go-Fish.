@@ -25,7 +25,7 @@ public class Player{
 		return playerName;
 	}
 
-	public int getBooks(){
+	public int getNumBooks(){
 		return numBooks;
 	}
 
