@@ -87,8 +87,9 @@ public class Hand{
 					result.add(current);
 				}
 			}
+			return result;
 		}
-		return result;
+		return null;
 	}
 
 	public void addCard(Card newCard){
