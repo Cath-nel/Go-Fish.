@@ -60,12 +60,14 @@ public class Player{
 	}
 
 	public void displayBooks(){
-		for(int i = 0; i < books.size(); i++){
-			System.out.println("Book " + Card.formalRank(books.get(i).get(0).getRank()));
-			for(int j = 0; j <books.get(i).size(); j++){
-				System.out.println(books.get(i).get(j).toString());
+		if(books != null){
+			for(int i = 0; i < books.size(); i++){
+				System.out.println("Book " + Card.formalRank(books.get(i).get(0).getRank()));
+				for(int j = 0; j <books.get(i).size(); j++){
+					System.out.println(books.get(i).get(j).toString());
+				}
+				System.out.println();
 			}
-			System.out.println();
 		}
 	}
 }
