@@ -83,10 +83,11 @@ public class Hand{
 				if(cards.get(i).getRank()==checkForBook()){
 					Card current = cards.get(i);
 					cards.remove(i);
-					numCards--;
+					//numCards--;
 					book.add(current);
 				}
 			}
+			numCards = numCards-4;
 			result.add(book);
 		}
 		
