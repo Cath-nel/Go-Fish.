@@ -45,8 +45,12 @@ public class Player{
 		hand.addCard(newCard);
 	}
 		
-	public void addBook(List<Card> book){
-		books.add(book);
-		numBooks++;
+	public void checkBooks(){
+		List<List<Card>> newBooks = new ArrayList<>();
+		newBooks = hand.getBook();
+		for(int i = 0; i < newBooks.size(); i++){
+			books.add(newBooks.get(i));
+			numBooks++;
+		}
 	}
 }
