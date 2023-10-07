@@ -44,13 +44,18 @@ public class Player{
 	public void takeCard(Card newCard){
 		hand.addCard(newCard);
 	}
-		
-	public void checkBooks(){
+
+	public List<List<Card>> getBooks(){
+		return books;
+	}
+	
+	public List<List<Card>> checkRoNewBooks(){
 		List<List<Card>> newBooks = new ArrayList<>();
 		newBooks = hand.getBook();
 		for(int i = 0; i < newBooks.size(); i++){
 			books.add(newBooks.get(i));
 			numBooks++;
 		}
+		return newBooks;
 	}
 }
