@@ -6,7 +6,7 @@ public class Player{
 	private String playerName; 
 	private Hand hand;
 	private int numBooks;
-	private List<List<Card>> books;
+	private List<List<Card>> books = new ArrayList<>();
 	
 	public Player(String playerID, String playerName){
 		this.playerID = playerID;
