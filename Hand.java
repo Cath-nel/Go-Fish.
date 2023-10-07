@@ -75,7 +75,7 @@ public class Hand{
 		return -1;
 	}
 
-	public List<List<Card>> getBook(int requestedRank){
+	public List<List<Card>> getBook(){
 		List<List<Card>> result = new ArrayList<>();
 		while(checkForBook()!=-1){
 			List<Card> book = new ArrayList<>();
