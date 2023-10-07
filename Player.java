@@ -51,8 +51,10 @@ public class Player{
 	
 	public List<Card> checkForNewBooks(){
 		List<Card> newBooks = new ArrayList<>();
-		newBooks = hand.getBook();
-		books.add(newBooks);
+		if(newBooks!=null){
+			newBooks = hand.getBook();
+			books.add(newBooks);
+		}
 		return newBooks;
 	}
 
