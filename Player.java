@@ -49,7 +49,7 @@ public class Player{
 		return books;
 	}
 	
-	public List<List<Card>> checkRoNewBooks(){
+	public List<List<Card>> checkForNewBooks(){
 		List<List<Card>> newBooks = new ArrayList<>();
 		newBooks = hand.getBook();
 		for(int i = 0; i < newBooks.size(); i++){
