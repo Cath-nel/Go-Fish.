@@ -97,9 +97,16 @@ public class GoFish{
 					computer.takeCard(current);
 				}else{
 					System.out.println("You have no cards of that rank. You tell opponent to Go Fish!");
-					Random rnd = new Random();
-					int num = rnd.nextInt(remainingInDeck);
-					computer.takeCard(cards.get(num));
+					if(remainingInDeck>0){
+						Random rnd = new Random();
+						int num = rnd.nextInt(remainingInDeck);
+						Card drawResult = cards.get(num);
+						computer.takeCard(drawResult);
+						cards.remove(drawResult);
+						remainingInDeck--;
+					}else{
+						System.out.println("Deck is finished. Your turn.");
+					}
 				}
 				break;
 			case 2:
@@ -109,11 +116,17 @@ public class GoFish{
 					user.takeCard(current2);
 				}else{
 					System.out.println("Opponent has no cards of that rank. Go Fish!");
-					Random rnd = new Random();
-					int num = rnd.nextInt(remainingInDeck);
-					Card fromDeck = cards.get(num);
-					System.out.println("You drew " + fromDeck.toString());
-					user.takeCard(fromDeck);
+					if(remainingInDeck>0){
+						Random rnd = new Random();
+						int num = rnd.nextInt(remainingInDeck);
+						Card fromDeck = cards.get(num);
+						System.out.println("You drew " + fromDeck.toString());
+						user.takeCard(fromDeck);
+						cards.remove(fromDeck);
+						remainingInDeck--;
+					}else{
+						System.out.println("Deck is finished. Opponent's turn.");
+					}
 				}
 				break;
 		}
