@@ -82,9 +82,9 @@ public class Hand{
 			for(int i =0; i<cards.size(); i++){
 				if(cards.get(i).getRank()==bookRank){
 					Card current = cards.get(i);
+					result.add(current);
 					cards.remove(current);
 					numCards--;
-					result.add(current);
 				}
 			}
 			return result;
