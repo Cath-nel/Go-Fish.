@@ -134,9 +134,7 @@ public class GoFish{
 				askCard(requestedRank, 2);
 				List<Card> newUserBooks = user.checkForNewBooks();
 				if(newUserBooks!=null){
-					for(int i = 0; i< newUserBooks.size(); i++){
 						System.out.println("New Book: " + Card.formalRank(newUserBooks.get(0).getRank()));
-					}
 				}
 				user.displayBooks();
 				currentPlayer = 2;
