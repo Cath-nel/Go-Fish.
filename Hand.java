@@ -79,7 +79,7 @@ public class Hand{
 		List<List<Card>> result = new ArrayList<>();
 		while(checkForBook()!=-1){
 			List<Card> book = new ArrayList<>();
-			for(int i =0; i<numCards; i++){
+			for(int i =0; i<numCards-1; i++){
 				if(cards.get(i).getRank()==checkForBook()){
 					Card current = cards.get(i);
 					cards.remove(i);
