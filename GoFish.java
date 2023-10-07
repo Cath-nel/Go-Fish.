@@ -147,7 +147,7 @@ public class GoFish{
 				int requestedRank = computer.getHand().identifyCardToRequest();
 				askCard(requestedRank, 1);
 				List<List<Card>> newCompBooks = computer.checkForNewBooks();
-				if(newUserBooks!=null){
+				if(newCompBooks!=null){
 					for(int i = 0; i< newCompBooks.size(); i++){
 						System.out.println("Opponent has new Book: " + Card.formalRank(newCompBooks.get(i).get(0).getRank()));
 					}
