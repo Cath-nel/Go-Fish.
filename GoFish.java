@@ -57,7 +57,7 @@ public class GoFish{
 	}
 
 	public void updateBooks(){
-		totalBooks = user.getBooks() + computer.getBooks();
+		totalBooks = user.getNumBooks() + computer.getNumBooks();
 		if(totalBooks == 13){
 			continueGame = false;
 		}
@@ -132,6 +132,10 @@ public class GoFish{
 				//Card request;
 				//askCard(request, 2);
 				askCard(requestedRank, 2);
+				List<List<Card>> newUserBooks = user.checkForNewBooks();
+				for(int i = 0; i< newUserBooks.size(); i++){
+					System.out.println("New Book: " + Card.getformalRank(newUserBooks.get(i).get(0).getRank()));
+				}
 				currentPlayer = 2;
 			}else if(currentPlayer==2){
 				//algorithm to decide which card to ask for
@@ -139,6 +143,7 @@ public class GoFish{
 				//askCard(request, 1);
 				int requestedRank = computer.getHand().identifyCardToRequest();
 				askCard(requestedRank, 1);
+				computer.checkForNewBooks();
 				currentPlayer = 1;
 			}
 			updateBooks();
