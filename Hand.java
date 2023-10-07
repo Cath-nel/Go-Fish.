@@ -57,31 +57,39 @@ public class Hand{
 		return null;
 	}
 
-	public boolean checkForBook(int aquiredRank){
-		int counter = 0;
-		for(int i =0; i<numCards; i++){
-			if(cards.get(i).getRank()==aquiredRank){
-				counter++;
-			}
-		}
-		if(counter==3){
-			return true;
-		}
-		return false;
-	}
-
-	public List<Card> getBook(int requestedRank){
-		List<Card> result = new ArrayList<>();
-		if(checkForCard(requestedRank)){
-			for(int i =0; i<numCards; i++){
-				if(cards.get(i).getRank()==requestedRank){
-					Card current = cards.get(i);
-					cards.remove(i);
-					numCards--;
-					result.add(current);
+	public int checkForBook(){
+		int[] frequency = new int[13];
+		for(int i = 0; i<13; i++){
+			for(int j =0; j<numCards; j++){
+				if(cards.get(j).getRank()==i+1){
+					frequency[i]++;
 				}
 			}
 		}
+		
+		for(int i =0; i<13; i++){
+			if(frequency[i] == 4){
+				return i+1;
+			}
+		}
+		return -1;
+	}
+
+	public List<List<Card>> getBook(int requestedRank){
+		List<List<Card>> result = new ArrayList<>();
+		while(checkForBook()!=-1){
+			List<Card> book = new ArrayList<>();
+			for(int i =0; i<numCards; i++){
+				if(cards.get(i).getRank()==checkForBook()){
+					Card current = cards.get(i);
+					cards.remove(i);
+					numCards--;
+					book.add(current);
+				}
+			}
+			result.add(book);
+		}
+		
 		return result;
 	}
 
