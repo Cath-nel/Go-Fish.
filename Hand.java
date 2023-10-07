@@ -95,6 +95,7 @@ public class Hand{
 
 	public void addCard(Card newCard){
 		cards.add(newCard);
+		numCards++;
 	}
 
 	public int identifyCardToRequest(){
