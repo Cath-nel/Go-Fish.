@@ -60,7 +60,7 @@ public class Hand{
 	public int checkForBook(){
 		int[] frequency = new int[13];
 		for(int i = 0; i<13; i++){
-			for(int j =0; j<numCards; j++){
+			for(int j =0; j<numCards-1; j++){
 				if(cards.get(j).getRank()==i+1){
 					frequency[i]++;
 				}
