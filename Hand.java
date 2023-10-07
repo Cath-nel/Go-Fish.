@@ -75,23 +75,19 @@ public class Hand{
 		return -1;
 	}
 
-	public List<List<Card>> getBook(){
-		List<List<Card>> result = new ArrayList<>();
+	public <List<Card> getBook(){
+		List<Card> result = new ArrayList<>();
 		while(checkForBook()!=-1){
 			int bookRank = checkForBook();
-			List<Card> book = new ArrayList<>();
 			for(int i =0; i<cards.size(); i++){
 				if(cards.get(i).getRank()==bookRank){
 					Card current = cards.get(i);
 					cards.remove(current);
-					//numCards--;
-					book.add(current);
+					numCards--;
+					result.add(current);
 				}
 			}
-			numCards = numCards-4;
-			result.add(book);
 		}
-		
 		return result;
 	}
 
