@@ -136,6 +136,7 @@ public class GoFish{
 				for(int i = 0; i< newUserBooks.size(); i++){
 					System.out.println("New Book: " + Card.formalRank(newUserBooks.get(i).get(0).getRank()));
 				}
+				user.displayBooks();
 				currentPlayer = 2;
 			}else if(currentPlayer==2){
 				//algorithm to decide which card to ask for
@@ -147,6 +148,7 @@ public class GoFish{
 				for(int i = 0; i< newCompBooks.size(); i++){
 					System.out.println("Opponent has new Book: " + Card.formalRank(newCompBooks.get(i).get(0).getRank()));
 				}
+				computer.displayBooks();
 				currentPlayer = 1;
 			}
 			updateBooks();
