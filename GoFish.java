@@ -62,6 +62,16 @@ public class GoFish{
 			continueGame = false;
 		}
 	}
+
+	public void getWinner(){
+		if(user.getNumBooks()>computer.getNumBooks){
+			System.out.println("You won!");
+		}else if(user.getNumBooks()<computer.getNumBooks){
+			ystem.out.println("Opponent won");
+		}else{
+			System.out.println("It's a draw");
+		}
+	}
 	
 	public void allocateCards(){
 		List<Card> playerCards = new ArrayList<>();
@@ -105,7 +115,8 @@ public class GoFish{
 						cards.remove(drawResult);
 						remainingInDeck--;
 					}else{
-						System.out.println("Deck is finished. Your turn.");
+						System.out.println("Deck is finished. Let's see who won:");
+						continueGame = false;
 					}
 				}
 				break;
@@ -125,7 +136,8 @@ public class GoFish{
 						cards.remove(fromDeck);
 						remainingInDeck--;
 					}else{
-						System.out.println("Deck is finished. Opponent's turn.");
+						System.out.println("Deck is finished. Let's see who won:");
+						continueGame = false;
 					}
 				}
 				break;
