@@ -178,6 +178,7 @@ public class GoFish{
 			}
 			updateBooks();
 		}
+		getWinner();
 		
 	}
 }
