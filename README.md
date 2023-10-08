@@ -11,14 +11,12 @@ Project title: Go Fish
 
 Project page: https://github.com/Cath-nel/Go-Fish./edit/main/README.md
 
-Instructions for use (allowable actions):
-
 Tools used: We used the random library to randomise cards when suffling as well as dealing cards.
 
-Concepts used: The games has been created using Java and visual studio. The program will use lists and arrays to store card values as well as completed books. 
+Concepts used: The games has been created using Java and Android Studio. The program will use lists and arrays to store card values as well as completed books. 
 
-Assumptions: There will be four players and the user (human) can choose as many players as they would like to play against. 
+Assumptions: There will be two players and the user (human) and the computer. 
 
-Limitations: The limit may be 4 players. The player might not be able to play another human, only the computer/s.
+Limitations: The limit may be 2 players. The player will not be able to play another human, only the computes.
 
 
