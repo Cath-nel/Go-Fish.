@@ -64,10 +64,10 @@ public class GoFish{
 	}
 
 	public void getWinner(){
-		if(user.getNumBooks()>computer.getNumBooks){
+		if(user.getNumBooks()>computer.getNumBooks()){
 			System.out.println("You won!");
-		}else if(user.getNumBooks()<computer.getNumBooks){
-			ystem.out.println("Opponent won");
+		}else if(user.getNumBooks()<computer.getNumBooks()){
+			System.out.println("Opponent won");
 		}else{
 			System.out.println("It's a draw");
 		}
