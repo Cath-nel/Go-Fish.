@@ -79,18 +79,34 @@ public class Hand{
 		List<Card> result = new ArrayList<>();
 		while(checkForBook()!=-1){
 			int bookRank = checkForBook();
-			for(int i =0; i<cards.size(); i++){
+
+			for(int i =0; i<4; i++){
+				Card current = getCard(bookRank);
+				result.add(current);
+			}
+
+			/*for(int i =0; i<cards.size(); i++){
 				if(cards.get(i).getRank()==bookRank){
 					Card current = cards.get(i);
-					result.add(current);
+					//result.add(current);
 					cards.remove(current);
 					numCards--;
 				}
 			}
+			Card heart = new Card(bookRank+"Hearts", Suite.SUITE_HEARTS, bookRank);
+			result.add(heart);
+			Card diamond = new Card(bookRank+"Diamonds", Suite.SUITE_DIAMONDS, bookRank);
+			result.add(diamond);
+			Card club = new Card(bookRank+"Clubs", Suite.SUITE_CLUBS, bookRank);
+			result.add(club);
+			Card spade = new Card(bookRank+"Spades", Suite.SUITE_SPADES, bookRank);
+			result.add(spade);
+			System.out.println(result.size());*/
 			return result;
 		}
 		return null;
 	}
+
 
 	public void addCard(Card newCard){
 		cards.add(newCard);
